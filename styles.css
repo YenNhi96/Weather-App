@@ -1,0 +1,59 @@
+.location {
+  margin: 16px;
+}
+
+h1 {
+  color: #085695;
+  margin-bottom: 0;
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 17px;
+  margin-left: 20px;
+  color: #316b9b;
+}
+
+strong {
+  font-size: 50px;
+  color: #085695;
+  position: relative;
+  left: -110px;
+}
+
+.unit {
+  position: relative;
+  top: -25px;
+  left: -100px;
+}
+
+.todayinfo {
+  font-size: 17px;
+  color: #316b9b;
+  line-height: 30px;
+  position: relative;
+}
+
+.todayinfo2 {
+  text-align: center;
+  color: #316b9b;
+}
+
+.today {
+  margin: 35px auto;
+  box-shadow: 0 0 25px rgb(184, 208, 236);
+}
+
+.next-days {
+  border-color: #6b95b8;
+}
+
+.day1,
+.day2,
+.day3,
+.day4,
+.day5 {
+  text-align: center;
+  color: #085695;
+  font-size: 17px;
+}
