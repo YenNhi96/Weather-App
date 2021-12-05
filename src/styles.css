@@ -18,13 +18,13 @@ strong {
   font-size: 50px;
   color: #085695;
   position: relative;
-  left: -110px;
+  left: -55px;
 }
 
 .unit {
   position: relative;
   top: -25px;
-  left: -100px;
+  left: -50px;
 }
 
 .todayinfo {
@@ -34,14 +34,10 @@ strong {
   position: relative;
 }
 
-.todayinfo2 {
-  text-align: center;
-  color: #316b9b;
-}
-
 .today {
-  margin: 35px auto;
+  margin: 20px 205px;
   box-shadow: 0 0 25px rgb(184, 208, 236);
+  position: relative;
 }
 
 .next-days {
@@ -56,4 +52,9 @@ strong {
   text-align: center;
   color: #085695;
   font-size: 17px;
+}
+
+.footer {
+  position: relative;
+  margin-left: 200px;
 }
