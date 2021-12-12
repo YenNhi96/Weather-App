@@ -2,6 +2,10 @@
   margin: 16px;
 }
 
+body {
+  background: linear-gradient(90deg, rgb(243, 220, 220), rgb(180, 230, 245));
+}
+
 h1 {
   color: #085695;
   margin-bottom: 0;
@@ -36,25 +40,16 @@ strong {
 
 .today {
   margin: 20px 205px;
-  box-shadow: 0 0 25px rgb(184, 208, 236);
+  box-shadow: 0 0 25px rgb(96, 145, 201);
   position: relative;
-}
-
-.next-days {
-  border-color: #6b95b8;
-}
-
-.day1,
-.day2,
-.day3,
-.day4,
-.day5 {
-  text-align: center;
-  color: #085695;
-  font-size: 17px;
 }
 
 .footer {
   position: relative;
   margin-left: 200px;
+}
+
+.active {
+  text-decoration: none;
+  color: black;
 }
