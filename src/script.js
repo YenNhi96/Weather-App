@@ -43,29 +43,21 @@ function weatherConditions(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function defaultCity(city1) {
+  let apiKey = "cffcba26a6e9ace9bd18290032464552";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city1}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(weatherConditions);
+}
+
 function search(city) {
   city.preventDefault();
   let searchInput = document.querySelector(".form-control");
   document.querySelector(".currentCity").innerHTML = `${searchInput.value}`;
-  let apiKey = "cffcba26a6e9ace9bd18290032464552";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(weatherConditions);
+  defaultCity(searchInput.value);
 }
 
 let changeCity = document.querySelector("#search-form");
 changeCity.addEventListener("submit", search);
-
-function showPosition(position) {
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiKey = "cffcba26a6e9ace9bd18290032464552";
-  let apiUrl2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl2).then(weatherConditions);
-}
-
-function getCurrentPosition(event) {
-  navigator.geolocation.getCurrentPosition(showPosition);
-}
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
@@ -91,7 +83,4 @@ celsiusConversion.addEventListener("click", displayCelsiusTemperature);
 
 let celsiusTemperature = null;
 
-let button2 = document.querySelector(".current-location-button");
-button2.addEventListener("click", getCurrentPosition);
-
-getCurrentPosition();
+defaultCity("Hanoi");
