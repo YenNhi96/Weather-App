@@ -21,6 +21,37 @@ let day = days[now.getDay()];
 let h2 = document.querySelector("h2");
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector(".weather-forecast");
+
+  let days = ["Fri", "Sat", "Sun"];
+  let multipleForecast = `<div class="row">`;
+
+  days.forEach(function (nextDays) {
+    multipleForecast =
+      multipleForecast +
+      `
+      <div class="col-2">
+        <div id="next-day">${nextDays}</div>
+          <img
+                class="forecast-icon"
+                src="http://openweathermap.org/img/wn/04n@2x.png"
+                alt="#"
+                width="80"
+              />
+        <div class="temperature-forecast">
+          <span id="max-temp">18°</span>
+          <span id="min-temp">12°</span>
+        </div>
+      </div>
+    `;
+  });
+
+  multipleForecast = multipleForecast + `</div>`;
+
+  forecastElement.innerHTML = multipleForecast;
+}
+
 function weatherConditions(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector(".currentDegree").innerHTML =
@@ -41,6 +72,7 @@ function weatherConditions(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  displayForecast();
 }
 
 function defaultCity(city1) {

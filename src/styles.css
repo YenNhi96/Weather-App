@@ -39,17 +39,32 @@ strong {
 }
 
 .today {
-  margin: 20px 205px;
+  margin: 20px 255px;
   box-shadow: 0 0 25px rgb(96, 145, 201);
   position: relative;
 }
 
 .footer {
   position: relative;
-  margin-left: 200px;
+  margin-left: 250px;
 }
 
 .active {
   text-decoration: none;
   color: black;
+}
+
+.weather-forecast {
+  text-align: center;
+}
+
+#next-day,
+#min-temp,
+#max-temp {
+  font-size: 15px;
+}
+
+#next-day,
+#min-temp {
+  color: rgb(155, 149, 149);
 }
